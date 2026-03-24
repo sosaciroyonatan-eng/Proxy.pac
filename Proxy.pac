@@ -21,5 +21,5 @@ function FindProxyForURL(url, host) {
     // 4. REGLAS DE APERTURA
     // Intentar usar el proxy para todo lo demás, pero con salida directa si falla
     // Esto es ideal para hardware móvil porque no bloquea la navegación si el proxy cae
-    return miProxy + "; DIRECT";
+    return miProxy;
 }
