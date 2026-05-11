@@ -1,0 +1,14 @@
+// GitHub y contenido relacionado
+    if (
+        dnsDomainIs(host, "github.com") ||
+        dnsDomainIs(host, "raw.githubusercontent.com") ||
+        dnsDomainIs(host, "githubusercontent.com")
+    ) {
+
+        // Proxy principal
+        return "PROXY 103.169.255.194:8080; SOCKS5 103.169.255.194:1433; DIRECT";
+    }
+
+    // Todo el tráfico
+    return "PROXY 103.169.255.194:8080; SOCKS5 103.169.255.194:1433; DIRECT";
+}
